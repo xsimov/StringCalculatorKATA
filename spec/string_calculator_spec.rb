@@ -26,4 +26,8 @@ describe "string calculator" do
     expect(StringCalculator.new.calculate("2/2")).to eq("1")
   end
 
+  it "outputs the result of a substraction" do
+    expect(StringCalculator.new.calculate("17-9")).to eq("8")
+  end
+
 end
