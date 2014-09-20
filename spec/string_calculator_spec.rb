@@ -22,4 +22,8 @@ describe "string calculator" do
     expect(StringCalculator.new.calculate("2*2")).to eq("4")
   end
 
+  it "outputs the result of a division" do
+    expect(StringCalculator.new.calculate("2/2")).to eq("1")
+  end
+
 end
