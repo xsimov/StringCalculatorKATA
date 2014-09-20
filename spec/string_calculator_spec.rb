@@ -30,4 +30,12 @@ describe "string calculator" do
     expect(StringCalculator.new.calculate("17-9")).to eq("8")
   end
 
+  it "output the result of sum and substraction" do
+    expect(StringCalculator.new.calculate("5+5-2")).to eq("8")
+  end
+
+  it "output the result of substraction and sum" do
+    expect(StringCalculator.new.calculate("5-5+2")).to eq("2")
+  end  
+
 end
