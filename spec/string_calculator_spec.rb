@@ -38,4 +38,8 @@ describe "string calculator" do
     expect(StringCalculator.new.calculate("5-5+2")).to eq("2")
   end  
 
+  it "output the result of two substractions" do
+    expect(StringCalculator.new.calculate("5-3-1")).to eq("1")
+  end 
+
 end
