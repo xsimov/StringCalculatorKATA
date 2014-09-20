@@ -10,8 +10,16 @@ describe "string calculator" do
     expect(StringCalculator.new.calculate("22")).to eq("22")
   end
 
-  it "outputs the result of an input sum" do
+  it "outputs the result of an one digit sum" do
     expect(StringCalculator.new.calculate("1+2")).to eq("3")
+  end
+
+  it "outputs the result of two digit number sum" do
+    expect(StringCalculator.new.calculate("11+12")).to eq("23")
+  end
+
+  it "outputs the result of a multiplication" do
+    expect(StringCalculator.new.calculate("2*2")).to eq("4")
   end
 
 end
