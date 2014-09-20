@@ -6,6 +6,8 @@ class StringCalculator
       sum
     elsif @input_string.include? "*"
       multiplication
+    elsif @input_string.include? "/"
+      division
     else
       @result = @input_string
     end
@@ -20,6 +22,11 @@ class StringCalculator
   def multiplication
     operands = @input_string.split("*")
     @result = operands.first.to_i * operands.last.to_i
+  end
+
+  def division
+    operands = @input_string.split("/")
+    @result = operands.first.to_i / operands.last.to_i
   end
 
 end
