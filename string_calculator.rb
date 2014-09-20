@@ -1,9 +1,15 @@
 class StringCalculator
 
   def calculate(input_string)
-    return input_string unless input_string.include?("+")
-    operands = input_string.split("+")
-    result = operands[0].to_i + operands[1].to_i  
+    if input_string.include? "+"
+      operands = input_string.split("+")
+      result = operands.first.to_i + operands.last.to_i
+    elsif input_string.include? "*"
+      operands = input_string.split("*")
+      result = operands.first.to_i * operands.last.to_i
+    else
+      result = input_string
+    end
     result.to_s
   end
 
