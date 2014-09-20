@@ -1,0 +1,10 @@
+String Calculator
+
+ - Input are strings
+ - Output is also a string
+ - It should add, extract, divide and multiply the numbers
+ - Regexp and eval are not allowed
+
+input (“1 + 2”)
+
+output “3”
