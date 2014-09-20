@@ -1,17 +1,19 @@
 class StringCalculator
 
   def calculate(input_string)
+
+    operations = {
+      "+" => lambda { sum },
+      "*" => lambda { multiplication },
+      "/" => lambda { division }
+    }
     @input_string = input_string
-    if @input_string.include? "+"
-      sum
-    elsif @input_string.include? "*"
-      multiplication
-    elsif @input_string.include? "/"
-      division
-    else
-      @result = @input_string
+    @result = @input_string
+    operations.each do |operator, value|
+      value.call if input_string.include? operator
     end
     @result.to_s
+    
   end
 
   def sum

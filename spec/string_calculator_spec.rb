@@ -19,7 +19,7 @@ describe "string calculator" do
   end
 
   it "outputs the result of a multiplication" do
-    expect(StringCalculator.new.calculate("2*2")).to eq("4")
+    expect(StringCalculator.new.calculate("2*3")).to eq("6")
   end
 
   it "outputs the result of a division" do
