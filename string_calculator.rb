@@ -7,8 +7,7 @@ class StringCalculator
     operators.each do |operator, value|
       return value.call.to_s if input_string.include? operator
     end
-    result = @input_string
-    result.to_s
+    @input_string
   end
 
   def operators
