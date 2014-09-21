@@ -39,8 +39,11 @@ class StringCalculator
   end
 
   def subtraction
-    operands = @input_string.split("-")
-    operands.first.to_i - operands.last.to_i
+    first_part = @input_string[0,@input_string.rindex("-")]
+    second_part = @input_string[(@input_string.rindex("-") + 1),@input_string.length]
+    first_part = calculate(first_part)
+    second_part = calculate(second_part)
+    first_part.to_i - second_part.to_i
   end
 
 end
